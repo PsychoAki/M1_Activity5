@@ -1,6 +1,6 @@
 package helloWorld;
 import java.util.Scanner;
-public class Main2 {
+public class grpActivity1 {
     public static void main(String[] args) {
         boolean run = true;
         String name = null;
@@ -12,14 +12,16 @@ public class Main2 {
         int avg = 0;
         int [] numofSubjects = new int [10]; 
 
-        System.out.println("===== STUDENT GRADING SYSTEM =====");
-        System.out.println("A. Add Student");
-        System.out.println("B. Compute Student Average");
-        System.out.println("C. Display Students Information");
+
         Scanner sc = new Scanner(System.in);
         while (run == true) { 
             
-            {
+            {   
+                System.out.println("");
+                System.out.println("===== STUDENT GRADING SYSTEM =====");
+                System.out.println("A. Add Student");
+                System.out.println("B. Compute Student Average");
+                System.out.println("C. Display Students Information");
                 System.out.printf("Enter Choice: ");
                 String option = sc.nextLine();
                 switch (option) {

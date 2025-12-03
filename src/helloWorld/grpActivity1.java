@@ -22,11 +22,13 @@ public class grpActivity1 {
                 System.out.println("A. Add Student");
                 System.out.println("B. Compute Student Average");
                 System.out.println("C. Display Students Information");
+                System.out.println("D. Exit");
                 System.out.printf("Enter Choice: ");
                 String option = sc.nextLine();
                 switch (option) {
                 case "a" , "A":
                     System.out.println("Option A is selected");  
+                    System.out.println("===== MAXIMMUM OF 10 SUBJECTS =====");
                     
                     System.out.printf("Enter your name:");
 			        name = sc.nextLine();
@@ -42,13 +44,21 @@ public class grpActivity1 {
                     System.out.printf("Enter number of subjects:");
 			        String numSub = sc.nextLine();
                     num3 = Integer.parseInt(numSub);
-
-                    for (int i = 0; i < num3; i++) {
+                    if (num3 <= numofSubjects.length) {
+                        for (int i = 0; i < num3; i++) {
                         System.out.printf("Enter Grade for subject " + (i+1) + ": ");
 			            String subj = sc.nextLine();
                         num4 = Integer.parseInt(subj);
                         numofSubjects[i] = num4;
+                        }
+                    } else {
+                        System.out.println("Exceeded number of subjects limit.");
+                        name = null;
+                        num = 0;
+                        num2 = 0;
+                        break;
                     }
+                    
                     System.out.println("===== Student Saved =====");
                     break;
                 case "b" ,"B":
